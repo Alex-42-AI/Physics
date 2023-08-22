@@ -2,9 +2,9 @@ from math import sqrt, sin, cos
 
 g = 9.80665
 c = 299792458
-G = 6.6743e-11
+G = 6.673848e-11
 au = 149597870700
-SunsMass = 1.9884849805923904e+30
+SunMass = 1.9884849805923904e+30
 MoonDistance = 384300000
 
 def time_to_fall(height: float, a: float = g):
