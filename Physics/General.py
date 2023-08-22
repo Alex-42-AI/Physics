@@ -1,4 +1,4 @@
-from math import sqrt, sin, cos
+from math import sqrt, sin, cos, radians
 
 g = 9.80665
 c = 299792458
@@ -20,7 +20,7 @@ def maximal_reachable_height(v: float, a: float = g):
 
 
 def final_position_of_object_thrown_into_the_air(alpha: float, v: float, a: float = g):
-    return 2 * v * cos(alpha) * time_to_fall(maximal_reachable_height(v * sin(alpha), a), a)
+    return 2 * v * cos(radians(alpha)) * time_to_fall(maximal_reachable_height(v * sin(radians(alpha)), a), a)
 
 
 def objects_speeds_after_impact(m1: float, v11: float, m2: float, v21: float):
