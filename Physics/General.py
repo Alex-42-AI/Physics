@@ -19,8 +19,14 @@ def maximal_reachable_height(v: float, a: float = g):
     return v ** 2 / (2 * a)
 
 
-def final_position_of_object_thrown_into_the_air(alpha: float, v: float, a: float = g):
-    return 2 * v * cos(radians(alpha)) * time_to_fall(maximal_reachable_height(v * sin(radians(alpha)), a), a)
+def final_position_of_object_thrown_into_the_air(alpha: float, v: float, initial_elevation: float = 0, final_elevation: float = 0, a: float = g):
+    v_x, v_y = v * cos(radians(alpha)), v * sin(radians(alpha))
+    max_height = maximal_reachable_height(v_y, a)
+    if final_elevation - initial_elevation > max_height:
+        return
+    to_the_top = v_x * time_to_fall(max_height, a)
+    from_the_top = v_x * time_to_fall(max_height - final_elevation + initial_elevation, a)
+    return to_the_top + from_the_top, final_elevation
 
 
 def objects_speeds_after_impact(m1: float, v11: float, m2: float, v21: float):
