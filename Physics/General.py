@@ -8,7 +8,7 @@ SunMass = 1.9884849805923904e+30
 MoonDistance = 384300000
 
 def time_to_fall(height: float, a: float = g):
-    return sqrt(height / a)
+    return sqrt(2 * height / a)
 
 
 def speed_by_the_end_of_falling(height: float, a: float = g):
