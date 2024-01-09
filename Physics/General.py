@@ -29,8 +29,8 @@ def final_position_of_object_thrown_into_the_air(alpha: float, v: float, initial
     return to_the_top + from_the_top, final_elevation
 
 
-def objects_speeds_after_impact(m1: float, v11: float, m2: float, v21: float):
-    return (v11 - v21) * (m1 - m2) / (m1 + m2) + v21, 2 * m1 * (v11 - v21) / (m1 + m2) + v21
+def objects_speeds_after_impact(m1: float, v1: float, m2: float, v2: float):
+    return (v1 - v2) * (m1 - m2) / (m1 + m2) + v2, 2 * m1 * (v1 - v2) / (m1 + m2) + v2
 
 
 def object_speed_at_certain_point_on_its_orbit(mass: float, distance: float):
