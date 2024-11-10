@@ -5,7 +5,7 @@ c = 299792458
 G = 6.673848e-11
 MoonDistance = 384300000
 au = 149597870700
-SunMass = 1.9884849805923904e30
+SolarMass = 1.9884849805923904e30
 
 def time_to_fall(height: float, a: float = g):
     return sqrt(2 * height / a)
