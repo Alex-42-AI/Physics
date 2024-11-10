@@ -17,8 +17,4 @@ def calculate_hidden(distance: float, viewer_elevation: float = 1.8):
     diff_angle = (distance - horizon) / EarthRadius
     if diff_angle >= pi / 2:
         return float('inf')
-    total_elevation_at_location = EarthRadius / cos(diff_angle)
-    return total_elevation_at_location - EarthRadius
-
-
-print()
+    return EarthRadius / cos(diff_angle) - EarthRadius
