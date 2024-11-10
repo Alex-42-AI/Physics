@@ -43,6 +43,3 @@ def total_speed_in_relativity(v0: float, v1: float):
 
 def contraction_in_relativity(v: float):
     return 1 / sqrt(1 - (v / c) ** 2)
-
-
-print()
