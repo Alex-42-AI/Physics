@@ -1,4 +1,4 @@
-from math import cos, acos, pi, inf
+from math import cos, acos
 
 EarthRadius = 6371000
 
