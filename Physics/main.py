@@ -182,6 +182,3 @@ def time_to_fall_into_singularity(m: float, r: float) -> float:
     """
 
     return pi * sqrt(r ** 3 / (8 * G * m))
-
-
-print(final_position_of_object_thrown_into_the_air(45, 54))
